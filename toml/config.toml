@@ -1,0 +1,12 @@
+[server]
+port = 8080
+
+[kafka]
+broker = "192.168.99.100:9092"
+topic1="orders.v1"
+topic2="trades.v1"
+
+[redis]
+address  = "192.168.99.100:6379"
+password = ""
+db       = 0

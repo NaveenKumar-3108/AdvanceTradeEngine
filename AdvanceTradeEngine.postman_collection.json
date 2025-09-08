@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "4bb6aeb4-3272-4b4c-965e-c3e194872e83",
+		"name": "AdvanceTradeEngine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27554195",
+		"_collection_link": "https://speeding-meadow-309364.postman.co/workspace/New-Team-Workspace~ecb052e9-dffa-4f2e-887f-968f9967c019/collection/27554195-4bb6aeb4-3272-4b4c-965e-c3e194872e83?action=share&source=collection_link&creator=27554195"
+	},
+	"item": [
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pair\": \"BTC/USD\",\r\n  \"side\": \"SELL\",\r\n  \"price\":1440,\r\n  \"quantity\": 2,\r\n  \"type\":\"LIMIT\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getCandles?pair=BTC/USD&interval=1s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getCandles"
+					],
+					"query": [
+						{
+							"key": "pair",
+							"value": "BTC/USD"
+						},
+						{
+							"key": "interval",
+							"value": "1s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getOrderBook?pair=BTC/USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getOrderBook"
+					],
+					"query": [
+						{
+							"key": "pair",
+							"value": "BTC/USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getTrades?pair=BTC/USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getTrades"
+					],
+					"query": [
+						{
+							"key": "pair",
+							"value": "BTC/USD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
